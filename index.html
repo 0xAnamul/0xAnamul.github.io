@@ -1,109 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Portfolio [init_session]</title>
   <meta charset="UTF-8">
-  <style>
-    /* Basic Setup */
-    body {
-      background-color: #000;
-      color: #00FF41; /* Bright green text */
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 16px;
-      line-height: 1.5;
-      margin: 0;
-      padding: 2rem;
-      /* Add a glowing effect to the text */
-      text-shadow: 0 0 5px #00FF41, 0 0 10px #00FF41;
-      overflow: hidden; /* Hide scrollbars */
-    }
-
-    /* Add a subtle scanline effect like an old CRT monitor */
-    body::after {
-      content: " ";
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-      z-index: 2;
-      background-size: 100% 2px, 3px 100%;
-      pointer-events: none;
-    }
-
-    /* Main terminal container */
-    .terminal {
-      text-align: left;
-    }
-
-    /* Styling for links */
-    a {
-      color: #00FF41;
-      text-decoration: none;
-    }
-
-    a:hover, a:focus {
-      background-color: #00FF41;
-      color: #000;
-      text-shadow: none;
-    }
-
-    /* Hide the text initially and prepare for typing animation */
-    .terminal p {
-      margin: 0;
-      white-space: nowrap; /* Keep text on a single line */
-      overflow: hidden;    /* Hide the overflowing text */
-      width: 0;            /* Start with zero width */
-      animation-fill-mode: forwards; /* Keep the state of the animation at the end */
-    }
-
-    /* The 'command' that the user 'typed' */
-    .terminal .command {
-      width: auto; /* Show the command instantly */
-      color: #fff;  /* Make the command a different color */
-    }
-
-    /* Typing Animation */
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-
-    /* Blinking Cursor Animation */
-    @keyframes blink {
-      50% { opacity: 0; }
-    }
-
-    /* Apply animations with delays to simulate typing sequence */
-    .line1 { animation: typing 2s steps(30, end) 1s 1 normal forwards; }
-    .line2 { animation: typing 3s steps(52, end) 3s 1 normal forwards; }
-    .line3 { animation: typing 2s steps(35, end) 6s 1 normal forwards; }
-    .line4 { animation: typing 3s steps(45, end) 8s 1 normal forwards; }
-    .line5 { animation: typing 2.5s steps(40, end) 11s 1 normal forwards; }
-
-    /* The cursor */
-    .cursor {
-      display: inline-block;
-      width: 10px;
-      height: 1.2rem;
-      background-color: #00FF41;
-      margin-left: 5px;
-      animation: blink 1s infinite;
-    }
-  </style>
+  <title>Anamul | Resume</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="terminal">
-    <p class="command">root@github:~# ./display_portfolio.sh</p>
-    <p class="line1">> Initializing boot sequence...</p>
-    <p class="line2">> Accessing secure mainframe... [Connection Established]</p>
-    <p class="line3">> Decrypting data streams... [OK]</p>
-    <p class="line4">> Welcome, agent. Loading portfolio now...</p>
-    <p class="line5">
-      <span>></span> <a href="#">PROJECTS</a> | <a href="#">GITHUB</a> | <a href="#">CONTACT</a><span class="cursor"></span>
-    </p>
+  <div class="container">
+    <h1>Anamul</h1>
+    <p>BBA Graduate | Learning Blockchain & Software Engineering</p>
+
+    <h2>📄 Projects</h2>
+    <ul>
+      <li><a href="https://github.com/anamul/your-nft-project">NFT Example (Scaffold-ETH 2)</a></li>
+      <li><a href="https://github.com/anamul/zama-fhe-blog">Zama FHE Blog</a></li>
+    </ul>
+
+    <h2>📫 Contact</h2>
+    <p>Email: mohammadanamul357@gmail.com</p>
+    <p>GitHub: <a href="https://github.com/0xAnamul">github.com/0xAnamul</a></p>
   </div>
 </body>
 </html>
