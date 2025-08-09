@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0xAnamul</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Add Font Awesome CDN below -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png"class="logo">
+                
+                <ul id="sidemenu">
+                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+
+                </ul>
+                <i class="fa-solid fa-teeth-open" onclick="openMenu()"></i>
+            </nav>
+            <div class="header-text">
+               
+                <p>Solidity Developer</p>
+                 <h1>Hi, I'm <span>Anamul</span> <br> From Bangladesh.</h1>
+                 
+                 </div>
+
+            </div>
+    </div>
+    <!---About Section--->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                   <p>I’m an EVM and smart contract specialist, building secure,
+                    efficient DApps on Ethereum and other EVM networks.
+                    I work with Solidity, optimize gas usage, 
+                    and create everything from NFTs to DeFi protocols — turning blockchain ideas into reality.</p>
+
+                    <div class="tab-titles">
+
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    
+                        <div class="tab-contents active-tab" id="skills">
+
+                            <ul>
+                                <li><span>Testing&QA</span><br>Testnet bug Reporting,contract simulation</li>
+                                <li><span>Community Management </span><br>Discord moderation,community engagement,community support</li>
+                                <li><span>Languages</span><br>Solidity, JavaScript, Python<br>Fluent in English and Bengali</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+
+                            <ul>
+                                <li><span>Contractor & Community Moderator</span><br>Managed blockchain-focused communities, fostering engagement and support.<br> ensuring effective communication and collaboration. <br> Organized events and initiatives to promote community growth.</li>
+                                <li><span>Testnet Contributor</span><br>Tested DApps for Transaction accuracy and performance on various testnets.</li>
+                                <li><span>Freelance Smart Contract</span><br>Optimizing smart contract execution and gas efficiency.<br>providing feedback to developers on best practices.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+
+                            <ul>
+                                <li><span>2023</span><br>B.Sc.(Honors) in Computer Science and Engineering</li>
+                                <li><span>2028</span><br>Higher Secondary Certificate (HSC)<br>Science</li>
+                                <li><span>2016</span><br>Secondary School Certificate (SSC)<br>Science</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!---contact section--->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                   <h1 class="sub-title">Contact Me</h1>
+                   <p><i class="fa-solid fa-envelope-circle-check"></i>mohammadanamul357@gmail.com</p>
+                   <div class="social-links">
+                        <a href="https://twitter.com/0xAnamul"><i class="fa-brands fa-square-x-twitter"></i></a>
+                        <a href="https://github.com/0xAnamul"><i class="fab fa-github"></i></a>
+                        <a href="https://instagram.com/0xanamul"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/0xAnamul/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://t.me/anamul_eth"><i class="fab fa-telegram"></i></a>       
+                        <a href="https://www.reddit.com/user/0xAnamul"><i class="fab fa-reddit"></i></a>    
+                   </div>
+                </div>                
+                
+            </div>
+        </div>
+    </div>
+
+    <script> 
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openMenu(){
+            sidemenu.style.right = "0";
+        }
+        function closeMenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
